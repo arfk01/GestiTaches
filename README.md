@@ -1,19 +1,37 @@
+GestiTâches
 
-# GestiTaches
+GestiTâches est une application web simple de gestion de tâches personnelles. Elle permet de créer une tâche (titre, description, date d'échéance), de la marquer comme complétée et de la supprimer. Le projet vise à aider chacun à mieux organiser son quotidien, tout en nous servant de terrain d'apprentissage pour le travail collaboratif avec Git et GitHub.
 
-GestiTaches est une application web de gestion des tâches personnelles.
+Structure du projet :
 
-Elle permet aux utilisateurs de créer des tâches avec un titre, une description et une date d'échéance. Les utilisateurs peuvent également marquer leurs tâches comme terminées ou les supprimer.
+/frontend : interface utilisateur
+/backend : API et stockage des tâches
+Équipe
+Membre	Nom d'utilisateur GitHub	Rôle
+Riad Benzorai	@benzo12-dev	Responsable technique (backend, API) et propriétaire du dépôt
+Khadidja Arfaoui Amira	@arfk01	Responsable frontend et documentation (backlog, README)
 
-Le projet est organisé en deux parties : frontend pour l'interface utilisateur et backend pour la gestion des données.
-## Stratégie de branchement
+Les deux membres se relisent mutuellement : chaque Pull Request est revue par l'autre personne.
 
-Nous avons choisi GitHub Flow car cette stratégie est simple et adaptée à notre projet .
+Stratégie de branchement
 
-Chaque membre travaille sur une branche séparée. Les modifications sont vérifiées par une Pull Request avant d'être fusionnées dans main.
+Stratégie choisie : GitHub Flow.
 
-## Convention de nommage des branches
+Pourquoi : c'est la stratégie la plus simple pour un petit projet scolaire de courte durée. Il n'y a qu'une branche principale (main) toujours stable, et chaque changement passe par une branche courte et une Pull Request revue par l'autre membre de l'équipe.
 
-- feature/nom-fonctionnalite : nouvelle fonctionnalité
-- fix/nom-correction : correction d'un bogue
-- docs/nom-document : documentation
+Convention de nommage des branches
+
+Format : type/numéro-issue-nom-court (en minuscules, mots séparés par des tirets).
+
+Préfixe	Usage	Exemple
+feature/	Nouvelle fonctionnalité	feature/12-ajout-tache
+fix/	Correction de bogue	fix/15-date-invalide
+docs/	Documentation	docs/20-readme-equipe
+test/	Branche d'essai (à supprimer)	test/riad, test/khadidja
+Règles de travail
+Ne jamais pousser directement sur main (la branche est protégée).
+Partir de main à jour : git checkout main && git pull.
+Créer une branche selon la convention ci-dessus.
+Un seul petit changement par branche et par PR.
+Ouvrir une PR avec le modèle, écrire Closes #numéro, assigner l'autre membre comme réviseur.
+Après approbation, fusionner, supprimer la branche, puis mettre main à jour localement.
